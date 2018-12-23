@@ -40,7 +40,13 @@ public class NumberWizard : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Enter was pressed.");
+            if (guess == 500)
+            {
+                Debug.Log("Really? Your number is going to be 500?");
+            } else
+            {
+                Debug.Log("Woohoo! A.I level achieved.");
+            }
         }
     }
 }
