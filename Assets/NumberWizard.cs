@@ -59,15 +59,15 @@ public class NumberWizard : MonoBehaviour
         }
     }
 
-    void NextGuess(string isMin)
+    void NextGuess(string isMinOrMax)
     {
-        if (isMin == "min")
+        if (isMinOrMax == "min")
         {
             min = guess;
             guess = ((max + min) / 2);
             Debug.Log($"Is the number {guess}? Press up for higher and down for lower or enter for yes!");
         }
-        else
+        else if (isMinOrMax == "max")
         {
             max = guess;
             guess = ((max + min) / 2);
